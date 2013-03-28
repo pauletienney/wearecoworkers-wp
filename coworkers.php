@@ -49,17 +49,17 @@ function wearecoworkers_function($atts) {
 
 		   	echo '<ul class="social">';
 			   	if($users->twitter)
-			   		echo '<li><a class="url" href="'.$users->twitter.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/twitter.png" width="22" height="22" /></a></li>';
+			   		echo '<li><a class="url" href="'.$users->twitter.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/twitter.png" /></a></li>';
 			   	if($users->facebook)
-			   		echo '<li><a class="url" href="'.$users->facebook.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/facebook.png" width="22" height="22" /></a></li>';
-			   	//if($users->viadeo)
-			   		//echo '<li><a class="url" href="'.$users->viadeo.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/default.png" width="16" height="16" /></a></li>';
+			   		echo '<li><a class="url" href="'.$users->facebook.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/facebook.png" /></a></li>';
+			   	if($users->viadeo)
+			   		echo '<li><a class="url" href="'.$users->viadeo.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/viadeo.png" /></a></li>';
 			   	if($users->linkedin)
-			   		echo '<li><a class="url" href="'.$users->linkedin.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/linkedin.png" width="22" height="22" /></a></li>';
+			   		echo '<li><a class="url" href="'.$users->linkedin.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/linkedin.png" /></a></li>';
 			   	if($users->behance)
-			   		echo '<li><a class="url" href="'.$users->behance.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/behance.png" width="22" height="22" /></a></li>';
-			   	//if($users->dribbble)
-			   		//echo '<li><a class="url" href="'.$users->dribbble.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/dribble.png" width="16" height="16" /></a></li>';
+			   		echo '<li><a class="url" href="'.$users->behance.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/behance.png" /></a></li>';
+			   	if($users->dribbble)
+			   		echo '<li><a class="url" href="'.$users->dribbble.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/dribbble.png" /></a></li>';
 		   	echo '</ul>';
 
 		   	if($users->site)
