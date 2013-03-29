@@ -13,7 +13,13 @@ License: GPL2
 define('WEARECOWORKERS_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 wp_register_style( 'style.css', WEARECOWORKERS_PLUGIN_URL . 'style.css', array(), '0.1' );
+
+wp_register_script( 'isotope.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/isotope.min.js', array(), '0.1' );
+wp_register_script( 'jquery.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/jquery-1.7.min.js', array(), '0.1' );
+
 wp_enqueue_style( 'style.css');
+wp_enqueue_script( 'jquery.min.js');
+wp_enqueue_script( 'isotope.min.js');
 
 function wearecoworkers_function($atts) {
 
