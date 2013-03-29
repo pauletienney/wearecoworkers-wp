@@ -1,10 +1,9 @@
-#wearecoworkers {
-
-}
 #wearecoworkers li {
 	list-style: none;
 }
-
+#wearecoworkers .photo {
+    height: 140px;
+}
 #wearecoworkers section {
 	position: relative;
 	margin-top: -1px;
@@ -34,13 +33,12 @@
 }
 #wearecoworkers .category {
 	position: absolute;
-	top: 30px;
-	left: 95px;
+	top: 150px;
 }
 #wearecoworkers .website {
 	position: absolute;
-	top: 50px;
-	left: 95px;
+	top: 60px;
+	left: 240px;
 }
 #wearecoworkers .fullMemberCard {
     background: white;

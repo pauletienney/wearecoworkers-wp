@@ -33,8 +33,8 @@ function wearecoworkers_function($atts) {
 
 ?>
 
+<h2>Voici la liste des Coworkers de <?php echo $data->name ?></h2>
 <div id="wearecoworkers">
-	<h2>Voici la liste des Coworkers de <?php echo $data->name ?></h2>
 
 	<ul>
 	<?php
@@ -53,7 +53,7 @@ function wearecoworkers_function($atts) {
 
             echo '</div><!-- .memberPhoto -->';
 
-            echo '<div class="memberName fullCardTrigger">';
+            echo '<div class="memberName">';
 
                 if($users->last_name && $users->first_name)
                     echo '<h1 class="fn">'.$users->first_name.' '.$users->last_name.'</h1>';
@@ -62,7 +62,7 @@ function wearecoworkers_function($atts) {
 
             echo '<div class="showOnCard fullCardName">';
                 if($users->job)
-                    echo'<span class="category">'.$users->job.'</span>';
+                        echo'<span class="category">'.$users->job.'</span>';
 
            
 		   	echo '<ul class="social">';
