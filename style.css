@@ -8,7 +8,7 @@
 #wearecoworkers section {
 	position: relative;
 	margin-top: -1px;
-	height:80px;
+	height:140px;
 	border: 1px solid #CCC;
 }
 #wearecoworkers .photo {
@@ -16,8 +16,11 @@
 }
 #wearecoworkers .fn {
 	position: absolute;
-	top: 5px;
-	left: 90px;
+	top: 120px;
+    background: #111;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
 }
 #wearecoworkers .social {
 	position: absolute;
@@ -38,4 +41,9 @@
 	position: absolute;
 	top: 50px;
 	left: 95px;
+}
+#wearecoworkers .fullMemberCard {
+    background: white;
+    height: 300px;
+    width: 300px;
 }

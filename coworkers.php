@@ -14,12 +14,14 @@ define('WEARECOWORKERS_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 wp_register_style( 'style.css', WEARECOWORKERS_PLUGIN_URL . 'style.css', array(), '0.1' );
 
-wp_register_script( 'isotope.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/isotope.min.js', array(), '0.1' );
-wp_register_script( 'jquery.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/jquery-1.7.min.js', array(), '0.1' );
+wp_register_script( 'isotope.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/isotope.min.js', array(), '0.1', true );
+wp_register_script( 'jquery.min.js', WEARECOWORKERS_PLUGIN_URL . 'js/jquery-1.7.min.js', array(), '0.1', true );
+wp_register_script( 'main.js', WEARECOWORKERS_PLUGIN_URL . 'js/main.js', array(), '0.1', true );
 
 wp_enqueue_style( 'style.css');
 wp_enqueue_script( 'jquery.min.js');
 wp_enqueue_script( 'isotope.min.js');
+wp_enqueue_script( 'main.js');
 
 function wearecoworkers_function($atts) {
 
@@ -42,17 +44,27 @@ function wearecoworkers_function($atts) {
 	   	echo '<li>';
 	   	echo '<section class="vcard">';
 
-	   		if($users->picture->url)
-		   		echo '<img class="photo" src="'.$users->picture->url.'" width="80" height="80" />';
-		   	else 
-		   		echo '<img class="photo" src="'.WEARECOWORKERS_PLUGIN_URL.'img/photo.jpg" width="100" height="100" />';
+            echo '<div class="memberPhoto">';
 
-		   	if($users->last_name && $users->first_name)
-		   		echo '<h1 class="fn">'.$users->first_name.' '.$users->last_name.'</h1>';
+                if($users->picture->url)
+                    echo '<img class="photo" src="'.$users->picture->url.'" width="138" height="140" />';
+                else 
+                    echo '<img class="photo" src="'.WEARECOWORKERS_PLUGIN_URL.'img/photo.jpg" width="138" height="140" />';
 
-		   	if($users->job)
-		   		echo'<span class="category">'.$users->job.'</span>';
+            echo '</div><!-- .memberPhoto -->';
 
+            echo '<div class="memberName fullCardTrigger">';
+
+                if($users->last_name && $users->first_name)
+                    echo '<h1 class="fn">'.$users->first_name.' '.$users->last_name.'</h1>';
+
+            echo '</div><!-- .memberName -->';
+
+            echo '<div class="showOnCard fullCardName">';
+                if($users->job)
+                    echo'<span class="category">'.$users->job.'</span>';
+
+           
 		   	echo '<ul class="social">';
 			   	if($users->twitter)
 			   		echo '<li><a class="url" href="'.$users->twitter.'"><img src="'.WEARECOWORKERS_PLUGIN_URL.'img/icons/twitter.png" /></a></li>';
@@ -70,6 +82,12 @@ function wearecoworkers_function($atts) {
 
 		   	if($users->site)
 		   		echo '<a class="url website" href="'.$users->site.'">Site Web</a>';
+                
+            echo '</div><!-- .showOnCard -->';
+
+            echo '<div class="bigCardBottom">';
+            echo '</div><!-- .bigCardBottom -->';
+
 
 		   	echo '</section>';
 	   	echo '</li>';
