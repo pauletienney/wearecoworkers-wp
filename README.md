@@ -3,8 +3,6 @@ Plugin WeAreCoworkers
 
 Ce plugin permet de lister les membres d'un lieu de coworking très simplement (si ils sont enregistrés sur [http://www.wearecoworkers.net/](http://www.wearecoworkers.net/) )
 
-Démo en ligne -> [javh.web4me.fr/WP/?page_id=2](http://javh.web4me.fr/WP/?page_id=2)
-
 
 En Pratique
 -------
